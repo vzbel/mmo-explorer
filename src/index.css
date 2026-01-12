@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* Uncomment for a debugging outline on all items */
+  /* outline: 1px solid grey; */
 }
 
 :root {
@@ -10,8 +12,16 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --light-text: rgb(112, 112, 112);
+  --light-outline: rgb(230, 230, 230);
+}
+
+.flex {
+  display: flex;
 }
 
 button {
+  border: none;
   cursor: pointer;
 }

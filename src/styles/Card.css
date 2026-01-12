@@ -1,0 +1,100 @@
+.card {
+    min-height: 580px;
+    max-width: 500px;
+    padding: 16px;
+    outline: 1px solid var(--light-outline);
+    box-shadow: rgb(219, 219, 219) -2px 4px 10px;
+}
+
+.card > hr {
+    margin-top: 12px;
+    margin-bottom: 16px;
+    border: 1px solid var(--light-outline);
+}
+
+.card-img {
+    height: 100%;
+    width: 100%;
+}
+
+.card-details {
+    margin-top: 8px;
+    color: var(--light-text);
+}
+
+.card-header {
+    justify-content: space-between;
+}
+
+.card-header-title {
+    color: black;
+    gap: 4px;
+}
+
+.card-header-title > h2 {
+    font-weight: 500;
+}
+
+.card-header-left {
+    flex-grow: 1;
+}
+
+.card-detail,
+.card-tags {
+    font-size: 14px;
+}
+
+.card-tags {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 140px;
+}
+
+.card-header-title,
+.card-tag {
+    align-items: center;
+}
+
+.card-tag {
+    font-size: inherit;
+    height: 45%;
+    width: 100%;
+    justify-content: space-between;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    padding-inline: 8px;
+}
+
+.card-tag > p {
+    white-space: nowrap;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-description {
+    margin-top: 32px;
+}
+
+@media(max-width: 380px){
+    .card {
+        min-height: 480px;
+    }
+    .card-header-title > h2 {
+        font-size: 18px;
+    }
+
+    .card-detail,
+    .card-tags {
+        font-size: 12px;
+    }
+
+    .card-description {
+        font-size: 14px;
+    }
+
+    .card-tags {
+        width: 120px;
+    }
+} 
