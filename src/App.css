@@ -1,0 +1,15 @@
+.btn-reg {
+    width: 140px;
+    margin-top: 32px;
+    padding: 16px 20px;
+    background-color: royalblue;
+    color: white;
+    font-size: 16px;
+}
+
+@media(max-width: 380px){
+    .btn-reg {
+        padding: 12px 16px;
+        font-size: 12px;
+    }
+}

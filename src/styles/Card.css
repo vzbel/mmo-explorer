@@ -31,7 +31,15 @@
     gap: 4px;
 }
 
+.card-header-title > h2,
+.card-tag > p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .card-header-title > h2 {
+    max-width: 200px;
     font-weight: 500;
 }
 
@@ -67,10 +75,7 @@
 }
 
 .card-tag > p {
-    white-space: nowrap;
     max-width: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .card-description {
@@ -81,7 +86,14 @@
     .card {
         min-height: 480px;
     }
+
+    .card-header {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
     .card-header-title > h2 {
+        max-width: 140px;
         font-size: 18px;
     }
 
@@ -91,10 +103,17 @@
     }
 
     .card-description {
+        margin-top: 16px;
         font-size: 14px;
     }
 
     .card-tags {
         width: 120px;
+        gap: 8px;
+        min-height: fit-content;
+    }
+
+    .card-tag {
+        min-height: 22px;
     }
 } 

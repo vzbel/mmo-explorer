@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import mmoapi from './services/mmoapi';
+import utils from './utils/utils';
 
 import Card from './components/Card';
 
@@ -30,7 +31,9 @@ const App = () => {
     console.log(`${value} will be added to ban list for ${key}`);
   };
 
-
+  const handleReroll = () => {
+    setIndex(utils.getRandomIndex(games.length));
+  };
 
   return (
     <>
@@ -58,6 +61,9 @@ const App = () => {
         />
       }
 
+      <button onClick={handleReroll} className="btn-reg">
+      Reroll MMO
+      </button>
     </>
   );
 };
