@@ -18,7 +18,9 @@ main {
 }
 
 main > h2,
-header {
+header,
+.bans,
+.no-games-msg {
     max-width: 500px;
     margin-inline: auto;
 }
@@ -68,6 +70,26 @@ aside {
     color: white;
     font-size: 16px;
 }
+
+.bans {
+    font-size: 12px;
+    align-items: center;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.banned-tag {
+    display: inline-block;
+    color: red;
+    background-color: transparent;
+    outline: 1px solid red;
+    padding: 8px;
+}
+
+.banned-tag:hover {
+    text-decoration: line-through;
+} 
 
 @media(max-width: 650px) {
     .wrapper {
