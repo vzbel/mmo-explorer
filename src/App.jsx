@@ -1,19 +1,64 @@
 import { useState, useEffect } from 'react';
 import mmoapi from './services/mmoapi';
+
+import Card from './components/Card';
+
 import './App.css';
 
 const App = () => {
   const [games, setGames] = useState([]);
+  // Current index in the games list
+  const [index, setIndex] = useState(21);
 
   useEffect(() => {
-    const data = mmoapi.getAll();
-    setGames(data);
+    const getAllGames = async () => {
+      const data = await mmoapi.getAll();
+      setGames(data);
+    };
+    getAllGames();
   }, []);
 
+  // Current game displayed to user
+  let game;
+  if(games.length > 0){
+    game = games[index];
+  }
+
+  // TODO: complete when implementing ban list 
+  const handleTagRemoval = (tag) => {
+    const [key, value] = Object.entries(tag)[0];
+    console.log(`${value} will be added to ban list for ${key}`);
+  };
+
+
+
   return (
-    <div>
-      Welcome
-    </div>
+    <>
+      {
+        game && 
+        <Card 
+          image={{
+            url: game.thumbnail,
+            alt: game.name + " game art, an MMORPG game"
+          }}
+          title={{
+            text: game.title,
+            link: game.game_url
+          }}
+          tags={[
+            {genre: game.genre},
+            {platform: game.platform}
+          ]}
+          onRemoveTag={handleTagRemoval}
+          description={game.short_description}
+          details={[
+            {publisher: game.publisher},
+            {developer: game.developer}
+          ]}
+        />
+      }
+
+    </>
   );
 };
 
