@@ -1,0 +1,45 @@
+.mini-card {
+    padding: 16px;
+    outline: 1px solid var(--light-outline);
+    box-shadow: rgb(219, 219, 219) -2px 1px 3px;
+    max-width: 300px;
+}
+
+.mini-card-img {
+    width: 100%;
+    height: 100%;
+}
+
+.mini-card > hr {
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+.mini-card-title {
+    display: block;
+    margin-bottom: 8px;
+    color: black;
+}
+
+.mini-card-title > h3 {
+    margin-right: 4px;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.mini-card-detail {
+    font-size: 14px;
+    color: var(--light-text);
+}
+
+@media(max-width: 380px){
+    .mini-card-title > h3 {
+        font-size: 14px;
+    }
+
+    .mini-card-detail {
+        font-size: 12px;
+    }
+} 

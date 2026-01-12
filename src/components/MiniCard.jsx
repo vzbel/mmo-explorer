@@ -1,3 +1,5 @@
+import "../styles/MiniCard.css";
+
 import { LinkIcon } from '@heroicons/react/16/solid';
 
 import utils from "../utils/utils.js";
@@ -13,6 +15,7 @@ const MiniCard = ({ image, title, details }) => {
                 <img 
                     src={image.url}
                     alt={image.alt} 
+                    className="mini-card-img"
                 />
             </div>
             <hr />
@@ -21,16 +24,17 @@ const MiniCard = ({ image, title, details }) => {
                     href={title.link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="mini-card-title"
                 >
                     <h3>{title.text}</h3>
-                    <LinkIcon width="16" />
+                    <LinkIcon width="13" className="mini-card-link-icon"/>
                 </a>
                 {
                     hasDetails &&
                     details.map((detail) => {
                         const [key, value] = Object.entries(detail)[0];
                         return (
-                            <p key={key}>
+                            <p key={key} className="mini-card-detail">
                                 {utils.getTitleCase(key)}: {value}
                             </p>
                         );
