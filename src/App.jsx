@@ -86,6 +86,7 @@ const App = () => {
               const seenGame = games[seenIndex];
               return (
                 <MiniCard
+                  key={seenGame.title}
                   image={{
                     url: seenGame.thumbnail,
                     alt: seenGame.name + " game art, an MMORPG game"
