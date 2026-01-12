@@ -40,12 +40,11 @@ const App = () => {
   };
 
   return (
-    <div className="wrapper">
-      <header>
-        <h1>MMO Explorer</h1>
-      </header>
-
+    <div className="wrapper flex">
       <main>
+        <header>
+          <h1>MMO Explorer</h1>
+        </header>
         <h2>Explore</h2>
         {
           game && 
@@ -76,11 +75,11 @@ const App = () => {
         </button>
       </main>
 
-      <hr />
+      <hr className="main-separator"/>
 
       <aside>
         <h3>History</h3>
-        <section>
+        <section className="history-grid flex">
           { 
             history.length > 0 && 
             history.toReversed().map((seenIndex) => {

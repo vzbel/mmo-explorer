@@ -1,10 +1,90 @@
+.wrapper {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    max-width: 1600px;
+    margin-inline: auto;
+    outline: 1px solid var(--light-outline);
+    box-shadow: rgb(219, 219, 219) -2px 1px 2px;
+    margin-top: 32px;
+}
+
+main,
+aside {
+    flex: 1; 
+}
+
+main {
+    padding: 16px;
+}
+
+main > h2,
+header {
+    max-width: 500px;
+    margin-inline: auto;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+main > h2,
+aside > h3 {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card,
 .btn-reg {
+    margin-inline: auto;
+}
+
+.main-separator {
+    margin-inline: 16px;
+}
+
+aside {
+    padding: 16px;
+}
+
+.history-grid {
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-height: 800px;
+    overflow-y: scroll;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+}
+
+.btn-reg {
+    display: block;
     width: 140px;
     margin-top: 32px;
     padding: 16px 20px;
     background-color: royalblue;
     color: white;
     font-size: 16px;
+}
+
+@media(max-width: 650px) {
+    .wrapper {
+        display: block;
+    }
+
+    aside > h3 {
+        text-align: center;
+        margin-bottom: 16px;
+    } 
+
+    .history-grid {
+        justify-content: center;
+        padding-left: 0px;
+        overflow-y: unset;
+        max-height: none;
+    }
 }
 
 @media(max-width: 380px){
