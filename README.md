@@ -2,8 +2,6 @@
 
 ![](https://www.rpgfan.com/wp-content/uploads/2021/08/Guild-Wars-2-End-of-Dragons-Artwork-011.jpg)
 
-## [Visit MMO Explorer](https://vzbel.github.io/mmo-explorer/) 
-
 **MMOExplorer** is a website that allows users to browse through **Massively Multiplayer Online (MMO)** video games at random, one recommendation at a time. It is inspired by the now defunct **[StumbleUpon](https://en.wikipedia.org/wiki/StumbleUpon)**.
 
 (Powered by MMOBomb.com API)
